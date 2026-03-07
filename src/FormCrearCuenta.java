@@ -30,10 +30,10 @@ public class FormCrearCuenta extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        lblLogo = new javax.swing.JLabel();
-        lblCR = new javax.swing.JLabel();
         lblnombreE1 = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         lblSlogan1 = new javax.swing.JLabel();
+        lblCR = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         lblLogin = new javax.swing.JLabel();
@@ -56,28 +56,28 @@ public class FormCrearCuenta extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/apolo - Editado.png"))); // NOI18N
-        jPanel3.add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
-
-        lblCR.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblCR.setForeground(new java.awt.Color(0, 56, 78));
-        lblCR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCR.setText("copyright ©️ Centro Apolo All rights reserved");
-        jPanel3.add(lblCR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 630, 520, -1));
-
-        lblnombreE1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lblnombreE1.setFont(new java.awt.Font("Arial Black", 1, 42)); // NOI18N
         lblnombreE1.setForeground(new java.awt.Color(0, 56, 78));
         lblnombreE1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblnombreE1.setText("CENTRO INFORMÁTICO");
-        jPanel3.add(lblnombreE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 530, -1));
+        jPanel3.add(lblnombreE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 850, -1));
 
-        lblSlogan1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/apolo - Editado (1).png"))); // NOI18N
+        jPanel3.add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
+
+        lblSlogan1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblSlogan1.setForeground(new java.awt.Color(0, 56, 78));
         lblSlogan1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSlogan1.setText("Tu aliado en innovación tecnológica");
-        jPanel3.add(lblSlogan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 530, -1));
+        jPanel3.add(lblSlogan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 850, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 660));
+        lblCR.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblCR.setForeground(new java.awt.Color(0, 56, 78));
+        lblCR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCR.setText("copyright ©️ Centro Apolo All rights reserved");
+        jPanel3.add(lblCR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 950, 850, 40));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 1050));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -140,7 +140,7 @@ public class FormCrearCuenta extends javax.swing.JFrame {
         lblNombre.setText("Nombre");
         jPanel2.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, 560));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 260, -1, 560));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
