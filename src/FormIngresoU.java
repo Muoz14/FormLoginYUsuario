@@ -1,4 +1,7 @@
 
+import javax.swing.JOptionPane;
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -45,8 +48,16 @@ public class FormIngresoU extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
-        txtCorreoE = new javax.swing.JTextField();
+        txtFC = new javax.swing.JTextField();
         txtUsuario = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtCorreoE = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtSupervisorIn = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtFC1 = new javax.swing.JTextField();
+        btnCerrarSesion2 = new javax.swing.JButton();
+        btnCerrarSesion3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -99,8 +110,8 @@ public class FormIngresoU extends javax.swing.JFrame {
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 100, 40));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel5.setText("Nombre:");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 90, 40));
+        jLabel5.setText("Fecha Creación:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 370, -1, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel6.setText("Correo Electronico:");
@@ -112,13 +123,46 @@ public class FormIngresoU extends javax.swing.JFrame {
         txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel4.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 100, 270, 40));
 
-        txtCorreoE.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel4.add(txtCorreoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 250, 40));
+        txtFC.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel4.add(txtFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 370, 250, 40));
 
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel4.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 270, 40));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel7.setText("Nombre:");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 90, 40));
+
+        txtCorreoE.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel4.add(txtCorreoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 250, 40));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel8.setText("Supervisor Inmediato:");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 220, 40));
+
+        txtSupervisorIn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel4.add(txtSupervisorIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 250, 40));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel9.setText("Fecha Modificación:");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 460, 200, 40));
+
+        txtFC1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel4.add(txtFC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 250, 40));
+
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 1270, 540));
+
+        btnCerrarSesion2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnCerrarSesion2.setForeground(new java.awt.Color(0, 0, 255));
+        btnCerrarSesion2.setText("INGRESAR");
+        btnCerrarSesion2.addActionListener(this::btnCerrarSesion2ActionPerformed);
+        jPanel1.add(btnCerrarSesion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 890, 180, 90));
+
+        btnCerrarSesion3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnCerrarSesion3.setForeground(new java.awt.Color(255, 0, 0));
+        btnCerrarSesion3.setText("ELIMINAR");
+        btnCerrarSesion3.addActionListener(this::btnCerrarSesion3ActionPerformed);
+        jPanel1.add(btnCerrarSesion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 890, 180, 90));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -127,7 +171,21 @@ public class FormIngresoU extends javax.swing.JFrame {
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
         // TODO add your handling code here:
+        FormLogin regresar = new FormLogin();
+        
+        regresar.setVisible(true);
+        regresar.pack();
+        regresar.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnCerrarSesion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesion2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCerrarSesion2ActionPerformed
+
+    private void btnCerrarSesion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesion3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCerrarSesion3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,12 +214,17 @@ public class FormIngresoU extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnCerrarSesion2;
+    private javax.swing.JButton btnCerrarSesion3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -169,7 +232,10 @@ public class FormIngresoU extends javax.swing.JFrame {
     private javax.swing.JLabel lblLogo1;
     private javax.swing.JLabel lblnombreE2;
     private javax.swing.JTextField txtCorreoE;
+    private javax.swing.JTextField txtFC;
+    private javax.swing.JTextField txtFC1;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtSupervisorIn;
     private javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
